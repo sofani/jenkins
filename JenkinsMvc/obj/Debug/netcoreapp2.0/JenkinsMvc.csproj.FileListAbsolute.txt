@@ -1,0 +1,10 @@
+C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.deps.json
+C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.runtimeconfig.json
+C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.runtimeconfig.dev.json
+C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.dll
+C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.pdb
+C:\revature\sofani_code\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.csproj.CoreCompileInputs.cache
+C:\revature\sofani_code\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.AssemblyInfoInputs.cache
+C:\revature\sofani_code\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.AssemblyInfo.cs
+C:\revature\sofani_code\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.dll
+C:\revature\sofani_code\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.pdb
