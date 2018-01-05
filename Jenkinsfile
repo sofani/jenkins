@@ -36,9 +36,10 @@ node('master') {
   stage('test') {
     try {
        dir('JenkinsMvc.Test') {
-       bat 'dotnet restore'
-       bat 'msbuild /t:build JenkinsMvc.Test.csproj'
-       bat 'dotnet test'
+            bat 'dotnet restore'
+            bat 'msbuild /t:build JenkinsMvc.Test.csproj'
+            bat 'dotnet test'
+        }
       } catch(error) {
       //slackSend message: color:'danger'
     }
