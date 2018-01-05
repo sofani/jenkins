@@ -22,10 +22,9 @@ node ('master') {
     stage('analyze') {
          try {
               dir('JenkinsMvc') {
-                  bat 'C:\\Tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe begin /k:jkmvc'
-                  //bat 'dotnet build'
-                  bat 'msbuild /t:build JenkinsMvc.csproj'
-                  bat 'C:\\Tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe end'
+                 bat 'C:\\Tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe begin /k:jkmvc'
+                 bat 'msbuild /t:build JenkinsMVC.csproj'
+                 bat 'C:\\Tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe end'
               }
         } catch(error) {
              //slackSend message: color: 'Danger'
