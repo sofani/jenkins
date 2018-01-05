@@ -45,10 +45,11 @@ node ('master') {
     }
     //conatina all the libraries as part of packages
     //msbuild is going to build from client side
-    stage('packege') {
+    stage('package') {
          try {
             dir ('JenkinsMvc') {
-                bat 'msbuild /t:pack JenkinsMvc.csproj'
+               // bat 'msbuild /t:pack JenkinsMvc.csproj --out ../Package'
+                bat 'dotnet pack JenkinsMvc.csproj --out ../Package'
             }
         } catch (error){
              //slackSend message: color: 'Danger'
@@ -57,7 +58,8 @@ node ('master') {
     }
     stage('deploy') {
          try {
-
+             dir(Jenkins)
+           bat 'msdeploy --verb:sync --sourcepath: --destpath:'
         } catch (error) {
              //slackSend message: color: 'Danger'
               throw error;
