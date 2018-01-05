@@ -9,7 +9,7 @@ node ('master') {
     }
     stage('build') {
          try {
-             dir('JenkinsMvc') {
+             dir('Jenkins') {
                //bat 'nuget restore'
                bat 'dotnet restore'
                bat 'msbuild /t:clean, build JenkinsMvc.csproj'
