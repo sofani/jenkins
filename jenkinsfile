@@ -9,8 +9,7 @@ node ('master') {
     }
     stage('build') {
          try {
-             dir('Jenkins') {
-               //bat 'nuget restore'
+             dir('jenkins') {
                bat 'dotnet restore'
                bat 'msbuild /t:clean, build JenkinsMvc.csproj'
              }
@@ -23,10 +22,10 @@ node ('master') {
     stage('analyze') {
          try {
               dir('JenkinsMvc') {
-                  bat 'C:\\tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe begin /k:jkmvc'
+                  bat 'C:\\tools\\sonarqube\\SonarQube.Scanner.MSBuild.exe begin /k:jkmvc'
                   //bat 'dotnet build'
                   bat 'msbuild /t:build JenkinsMvc.csproj'
-                  bat 'C:\\tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe end'
+                  bat 'C:\\tools\\sonarqube\\SonarQube.Scanner.MSBuild.exe end'
               }
         } catch(error) {
              //slackSend message: color: 'Danger'
