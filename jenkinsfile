@@ -1,7 +1,7 @@
 node ('master') {
     stage('import') {
         try {
-            git url: 'https://github.com/1712-dec4-net/jenkins.git'
+            git url: 'https://github.com/sofani/jenkins.git'
         } catch(error) {
           //slackSend message :(env.BUILD_NUMBER) color: 'Danger'
           throw error;
@@ -10,7 +10,7 @@ node ('master') {
     stage('build') {
          try {
              dir('JenkinsMvc') {
-               bat 'nuget restore'
+               //bat 'nuget restore'
                bat 'dotnet restore'
                bat 'msbuild /t:clean, build JenkinsMvc.csproj'
              }
@@ -25,7 +25,7 @@ node ('master') {
               dir('JenkinsMvc') {
                   bat 'C:\\tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe begin /k:jkmvc'
                   //bat 'dotnet build'
-                  bat 'msbuild /t:build JenkinsMVC.csproj'
+                  bat 'msbuild /t:build JenkinsMvc.csproj'
                   bat 'C:\\tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe end'
               }
         } catch(error) {
