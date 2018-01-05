@@ -1,0 +1,60 @@
+node ('master') {
+    stage('import') {
+        try {
+            git url: 'https://github.com/1712-dec4-net/jenkins.git'
+        } catch(error) {
+          //slackSend message :(env.BUILD_NUMBER) color: 'Danger'
+          throw error;
+        }
+    }
+    stage('build') {
+         try {
+             dir('JenkinsMvc') {
+               bat 'nuget restore'
+               bat 'dotnet restore'
+               bat 'msbuild /t:clean, build JenkinsMvc.csproj'
+             }
+
+        } catch (error) {
+             //slackSend message: color: 'Danger'
+              throw error;
+        }
+    }
+    stage('analyze') {
+         try {
+              dir('JenkinsMvc') {
+                  bat 'C:\\tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe begin /k:jkmvc'
+                  //bat 'dotnet build'
+                  bat 'msbuild /t:build JenkinsMVC.csproj'
+                  bat 'C:\\tools\\SonarQube\\SonarQube.Scanner.MSBuild.exe end'
+              }
+        } catch(error) {
+             //slackSend message: color: 'Danger'
+              throw error;
+        }
+    }
+    stage('test') {
+         try {
+
+        } catch (error) {
+             //slackSend message: color: 'Danger'
+              throw error;
+        }
+    }
+    stage('packege') {
+         try {
+
+        } catch (error){
+             //slackSend message: color: 'Danger'
+              throw error;
+        }
+    }
+    stage('deploy') {
+         try {
+
+        } catch (error) {
+             //slackSend message: color: 'Danger'
+              throw error;
+        }
+    }
+}
