@@ -43,9 +43,13 @@ node ('master') {
               throw error;
         }
     }
+    //conatina all the libraries as part of packages
+    //msbuild is going to build from client side
     stage('packege') {
          try {
-
+            dir ('JenkinsMvc') {
+                bat 'msbuild /t:package JenkinsMvc.csproj'
+            }
         } catch (error){
              //slackSend message: color: 'Danger'
               throw error;
