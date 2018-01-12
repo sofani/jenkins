@@ -13,3 +13,13 @@ C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\xunit.runner.
 C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
 C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.Test.dll
 C:\revature\sofani_code\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.Test.pdb
+C:\revature\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.deps.json
+C:\revature\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.runtimeconfig.json
+C:\revature\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.runtimeconfig.dev.json
+C:\revature\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.dll
+C:\revature\jenkins\JenkinsMvc\bin\Debug\netcoreapp2.0\JenkinsMvc.pdb
+C:\revature\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.csproj.CoreCompileInputs.cache
+C:\revature\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.AssemblyInfoInputs.cache
+C:\revature\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.AssemblyInfo.cs
+C:\revature\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.dll
+C:\revature\jenkins\JenkinsMvc\obj\Debug\netcoreapp2.0\JenkinsMvc.pdb
