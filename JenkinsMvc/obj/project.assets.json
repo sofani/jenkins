@@ -5227,8 +5227,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "JenkinsMvc": "1.0.0",
           "Microsoft.NET.Test.Sdk": "15.5.0",
           "xunit": "2.3.1",
+          "xunit.runner.console": "2.3.1",
           "xunit.runner.visualstudio": "2.3.1"
         },
         "compile": {
@@ -13686,11 +13688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\revature\\sofani_code\\jenkins\\JenkinsMvc\\JenkinsMvc.csproj",
+      "projectUniqueName": "C:\\revature\\jenkins\\JenkinsMvc\\JenkinsMvc.csproj",
       "projectName": "JenkinsMvc",
-      "projectPath": "C:\\revature\\sofani_code\\jenkins\\JenkinsMvc\\JenkinsMvc.csproj",
+      "projectPath": "C:\\revature\\jenkins\\JenkinsMvc\\JenkinsMvc.csproj",
       "packagesPath": "C:\\Users\\sofa\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\sofani_code\\jenkins\\JenkinsMvc\\obj\\",
+      "outputPath": "C:\\revature\\jenkins\\JenkinsMvc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -13711,8 +13713,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\revature\\sofani_code\\jenkins\\JenkinsMvc.Test\\JenkinsMvc.Test.csproj": {
-              "projectPath": "C:\\revature\\sofani_code\\jenkins\\JenkinsMvc.Test\\JenkinsMvc.Test.csproj"
+            "C:\\revature\\jenkins\\JenkinsMvc.Test\\JenkinsMvc.Test.csproj": {
+              "projectPath": "C:\\revature\\jenkins\\JenkinsMvc.Test\\JenkinsMvc.Test.csproj"
             }
           }
         }
@@ -13751,5 +13753,16 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1108",
+      "level": "Error",
+      "message": "Cycle detected. \r\n  JenkinsMvc -> JenkinsMvc.Test -> JenkinsMvc.",
+      "libraryId": "JenkinsMvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
